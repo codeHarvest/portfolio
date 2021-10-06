@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;700&display=swap');
+
+
+:root{
+box-sizing: border-box;
+--white: #fff;
+--dark: rgba(12, 24, 33);
+--mild: rgba(27, 42, 65);
+--basic: rgba(50, 74, 95);
+}
+
+/*----------------*/
+/* TYPE SELECTORS */
+/*----------------*/
+
+
+
+img{
+width: 300px;
+height: 350px;
+}
+
+
+a{
+text-decoration: none;
+color : var(--white);
+}
+
+input::placeholder{
+text-transform: uppercase;
+font-family: 'Stick No Bills', sans-serif;
+font-size: 1.3rem;
+letter-spacing: 1.5px;
+transition: all .4s ease;
+}
+
+/*-----------------*/
+/*    CONTAINER    */
+/*-----------------*/
+
+
+
+.container{
+position: relative;
+font-family: 'Stick No Bills', sans-serif;
+}
+
+/*---------------*/
+/*       Nav     */
+/*---------------*/
+
+#navbar{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+.nav{
+display: flex;
+justify-content: flex-end;
+
+}
+
+.nav li{
+margin: 1rem;
+font-size: 1.3rem;
+letter-spacing: .5px;
+}
+
+
+/*---------------*/
+/*     SECTION    */
+/*---------------*/
+
+
+section{
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+/*--------------------*/
+/*    FIRST SECTION   */
+/*-------------------*/
+
+
+#welcome-section{
+height: 100vh;
+background-color: var(--dark);
+}
+
+.welcome-heading{
+padding: 0 1rem;
+font-size: 4rem;
+font-weight: bold;
+color: var(--white);
+}
+
+
+/*--------------------*/
+/*    SECOND SECTION  */
+/*-------------------*/
+
+
+#projects{
+display: grid;
+grid-template-columns: repeat(4 , auto);
+background: var(--mild);
+justify-content: space-evenly;
+height: 100vh;
+z-index:1;
+}
+
+.project-container{
+border: 3px solid black;
+}
+
+.project-title{
+background-color: var(--basic);
+padding: 2rem 0rem 2rem 1rem;
+font-size: 1.6rem;
+font-weight: bold;
+}
+
+/*--------------------*/
+/*    THIRD SECTION  */
+/*-------------------*/
+
+#contact{
+background: var(--basic);
+height: 100vh;
+}
+
+.contact-form{
+margin: 4rem 0;
+display: flex;
+flex-direction: column;
+align-items : center;
+}
+
+.fields{
+outline: none;
+width: 24rem;
+padding: 1rem;
+margin: 1.5rem 0 0 0;
+}
+.btn{
+margin-left: -12rem;
+margin-top: 2rem;
+cursor: pointer;
+width: 12rem;
+padding: 1rem;
+color: var(--white);
+letter-spacing: 2px;
+text-transform: uppercase;
+background: transparent;
+border: inset;
+border-radius: 2px;
+border: 3px solid var(--white);
+font-size: 1.5rem;
+font-weight: bold;
+font-family: 'Stick No Bills', sans-serif;
+transition: all .5s ease-in-out;
+}
+
+#social i{
+font-size: 2rem;
+}
+
+
+/*--------------------*/
+/*    SOCIAL      */
+/*-------------------*/
+
+.social-list{
+position: fixed;
+top: 370px;
+right: 20px;
+border-radius: 15px;
+width: 30px;
+padding: .5rem 1rem 1.2rem 1rem;
+background: rgba(204, 201, 220,.8);
+}
+
+.social-link{
+margin-top: 1rem;
+}
+
+#profile-link{
+color: var(--dark);
+}
+
+/*--------------------*/
+/*    ANIMATIONS      */
+/*-------------------*/
+
+
+
+a:hover{
+color: rgba(204, 201, 220);
+}
+
+#profile-link i:hover{
+color: var(--basic);
+transform: rotate(30deg);
+}
+
+input:focus::placeholder{
+font-size: .75rem;
+transform: translate(-1px ,-11px);
+color:#e63946;
+}
+
+
+.btn:hover{
+color: #e63946;
+border-color: #e63946;
+}
+
+/*--------------------*/
+/*    MEDIA QUERY    */
+/*-------------------*/
+
+
+
+@media (max-width: 1340px){
+#projects{
+grid-template-columns: repeat(2,auto);
+height: auto;
+}
+.project-container{
+margin: 1rem 0;
+grid-gap: 0;
+}
+}
+
+@media (max-width: 760px){
+#projects{  
+height: auto;
+grid-template-columns: auto;
+grid-gap: 20px;
+}
+img{
+width: 26rem;
+height: 32rem;
+}
+}
+
+
+@media (max-width: 490px){
+    .fields{
+        width: 16rem;
+    }
+    .btn{
+        margin-left: -4rem;
+    }
+
+img{
+width: 18rem;
+height: 20rem;
+}
+}
